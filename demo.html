@@ -35,7 +35,8 @@ DATE: JUNE 6 2024
                 message: message
             };
 
-            fetch('https://mail.haozheli.com/send_email', {
+            // REMEMBER TO CHANGE THIS TO YOUR OWN DOMAIN
+            fetch('https://YOUR_DOMAIN/send_email', { // HERE!!!!!!
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
