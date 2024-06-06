@@ -1,9 +1,13 @@
+# THIS IS A DEMO HTML FOR CONTACT FLASK PROJECT
+# AUTHOR: HAOZHE LI
+# DATE: JUNE 6 2024
 from flask import Flask, request, jsonify
 from flask_mail import Mail, Message
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import os
+import time
 
 app = Flask(__name__)
 CORS(app)
@@ -18,6 +22,7 @@ SENDER = str(os.getenv('MAIL_SENDER')) # your email address, could be the same a
 FORWARD = str(os.getenv('MAIL_FORWARD')) # the email address you want to forward the contact form to
 NAME = str(os.getenv('MAIL_NAME')) # your name
 SOURCE = str(os.getenv('VALID_REQUEST_SOURCE')) # the source of the request, e.g. your website
+DATE = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 mail = Mail(app)
 
@@ -53,7 +58,7 @@ def send_email():
     to_client_msg = Message('[Auto-Reply] Thank you for contacting me!',
                   sender=SENDER,
                   recipients=[email])
-    to_client_msg.body = f"[Auto-Reply] Thank you for contacting me! I will get back to you soon. \n\n Sincerely, \n {NAME}"
+    to_client_msg.body = f"[Auto-Reply] Thank you for contacting me! I will get back to you soon. \n\n Sincerely, \n {NAME}, {DATE}"
     try:
         mail.send(to_client_msg)
     except Exception as e:

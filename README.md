@@ -1,6 +1,6 @@
 # Contact Flask
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHaozhe-Li%2FContact_Flask&env=MAIL_SERVER,MAIL_PASSWORD,MAIL_USERNAME,MAIL_SENDER,MAIL_FORWARD,MAIL_NAME,VALID_REQUEST_SOURCE&envDescription=Env%20needed%20for%20Contact%20Flask) | [<img width="50" src="https://user-images.githubusercontent.com/25181517/183423775-2276e25d-d43d-4e58-890b-edbc88e915f7.png" alt="Flask" title="Flask"/>](https://flask.palletsprojects.com/en/3.0.x/) | [<img width="50" src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" alt="Python" title="Python"/>](https://www.python.org)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHaozhe-Li%2FContact_Flask&env=MAIL_SERVER,MAIL_PASSWORD,MAIL_USERNAME,MAIL_SENDER,MAIL_FORWARD,MAIL_NAME,VALID_REQUEST_SOURCE&envDescription=Env%20needed%20for%20Contact%20Flask)   [<img width="50" src="https://user-images.githubusercontent.com/25181517/183423775-2276e25d-d43d-4e58-890b-edbc88e915f7.png" alt="Flask" title="Flask"/>](https://flask.palletsprojects.com/en/3.0.x/)   [<img width="50" src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" alt="Python" title="Python"/>](https://www.python.org)
 
 This is a simple email server built with Flask and Flask-Mail. It works fast and seamlessly with your contact form on your static website.
 
