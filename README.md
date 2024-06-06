@@ -24,7 +24,7 @@ To use this email server, follow these steps:
     pip install -r requirements.txt
     ```
 
-3. Set up the environment variables:
+3. Set up the environment variables by creating an ``.env`` file in your project directory:
 
     - `MAIL_SERVER`: SMTP server address
     - `MAIL_USERNAME`: SMTP server username.
@@ -43,7 +43,7 @@ To use this email server, follow these steps:
 
 ## Deployment
 
-1. Click here to [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHaozhe-Li%2FContactFlask&env=MAIL_SERVER,MAIL_PASSWORD,MAIL_USERNAME,MAIL_SENDER,MAIL_FORWARD,MAIL_NAME&envDescription=All%20the%20SMTP%20mail%20requires), or you can manually deployed to any platform if you like
+1. Click here to [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHaozhe-Li%2FContactFlask&env=MAIL_SERVER,MAIL_PASSWORD,MAIL_USERNAME,MAIL_SENDER,MAIL_FORWARD,MAIL_NAME&envDescription=All%20the%20SMTP%20mail%20requires), or you can manually deployed to any platform as you like
 
 2. Configure the environment variables as [mentioned above](#Usage), also configure your domain (it would be ok if you use the ``vercel.app`` )
 
