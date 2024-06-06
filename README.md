@@ -15,7 +15,7 @@ To use this email server, follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Haozhe-Li/ContactFlask.git
+    git clone https://github.com/Haozhe-Li/Contact_Flask.git
     ```
 
 2. Install the required dependencies:
