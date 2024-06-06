@@ -17,17 +17,19 @@ app.config['MAIL_PASSWORD'] = str(os.getenv('MAIL_PASSWORD')) # your email passw
 SENDER = str(os.getenv('MAIL_SENDER')) # your email address, could be the same as MAIL_USERNAME
 FORWARD = str(os.getenv('MAIL_FORWARD')) # the email address you want to forward the contact form to
 NAME = str(os.getenv('MAIL_NAME')) # your name
-SOURCE = str(os.getenv('VALID_REQUEST_SOURCE'))
+SOURCE = str(os.getenv('VALID_REQUEST_SOURCE')) # the source of the request, e.g. your website
 
 mail = Mail(app)
 
 limiter = Limiter(
     get_remote_address,
     app=app,
-    default_limits=["10 per minute", "60 per hour"]
+    default_limits=["10 per minute", "60 per hour"] # limit the number of requests to 10 per minute and 60 per hour
 )
 
 def is_request_from_my_website():
+    if SOURCE =='False':
+        return True # bypass
     referer = request.headers.get('Referer')
     return SOURCE in referer if referer else False
 
@@ -55,7 +57,7 @@ def send_email():
     try:
         mail.send(to_client_msg)
     except Exception as e:
-        return jsonify({'message': 'send to client failed'}), 500
+        return jsonify({'message': 'send to client failed. Service halt.'}), 500
     try:
         mail.send(to_myself_msg)
         return jsonify({'message': 'Email sent!'}), 200

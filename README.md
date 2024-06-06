@@ -32,6 +32,7 @@ To use this email server, follow these steps:
     - `MAIL_SENDER`: Email address to send emails from
     - `MAIL_FORWARD`: Email address to forward emails to
     - `MAIL_NAME`: Name to display in the email
+    - `VALID_REQUEST_SOURCE`: The source of the request, e.g. your website example.com. This will helps you filter the malicious injection. Set to **FALSE** to disable flitering.
 
 4. Run the Flask application:
 
