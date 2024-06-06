@@ -6,15 +6,15 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-app.config['MAIL_SERVER'] = str(os.getenv('MAIL_SERVER'))
+app.config['MAIL_SERVER'] = str(os.getenv('MAIL_SERVER')) # your SMTP email server
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = str(os.getenv('MAIL_USERNAME'))
-app.config['MAIL_PASSWORD'] = str(os.getenv('MAIL_PASSWORD'))
+app.config['MAIL_USERNAME'] = str(os.getenv('MAIL_USERNAME')) # your email username (don't use alias email name, use the real email name)
+app.config['MAIL_PASSWORD'] = str(os.getenv('MAIL_PASSWORD')) # your email password, you probably need to generate a secret key or app-specific password
 
-SENDER = str(os.getenv('MAIL_SENDER'))
-FORWARD = str(os.getenv('MAIL_FORWARD'))
-NAME = str(os.getenv('MAIL_NAME'))
+SENDER = str(os.getenv('MAIL_SENDER')) # your email address, could be the same as MAIL_USERNAME
+FORWARD = str(os.getenv('MAIL_FORWARD')) # the email address you want to forward the contact form to
+NAME = str(os.getenv('MAIL_NAME')) # your name
 
 mail = Mail(app)
 
