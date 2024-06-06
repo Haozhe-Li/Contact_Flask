@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 from flask_mail import Mail, Message
+from flask_cors import CORS
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 app.config['MAIL_SERVER'] = str(os.getenv('MAIL_SERVER'))
 app.config['MAIL_PORT'] = 587
@@ -30,10 +32,10 @@ def send_email():
     Message:
     {message}
     """
-    to_client_msg = Message('[{NAME}] THANKS!',
+    to_client_msg = Message('[Auto-Reply] Thank you for contacting me!',
                   sender=SENDER,
                   recipients=[email])
-    to_client_msg.body = f"[Auto-Reply] Thank you for contacting us! I will get back to you soon. \n\n Sincerely, \n {NAME}"
+    to_client_msg.body = f"[Auto-Reply] Thank you for contacting me! I will get back to you soon. \n\n Sincerely, \n {NAME}"
     try:
         mail.send(to_client_msg)
     except Exception as e:
