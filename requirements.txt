@@ -1,0 +1,2 @@
+Flask==2.2.5
+Flask-Mail==0.10.0
