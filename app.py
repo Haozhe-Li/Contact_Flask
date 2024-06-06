@@ -44,5 +44,9 @@ def send_email():
     except Exception as e:
         return jsonify({'error': str(e), 'message':'forward to myself failed'}), 500
 
+@app.route('/')
+def index():
+    return 'Hi! This is a simple email server, and welcome to my project!'
+
 if __name__ == '__main__':
     app.run(debug=True)
