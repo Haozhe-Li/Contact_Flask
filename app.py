@@ -45,6 +45,8 @@ def send_email():
         return jsonify({'message': 'Invalid request source'}), 403
     data = request.json
     name = data.get('name')
+    if name == 'test':
+        return jsonify({'message': 'Endpoint is working! Test success.'}), 200
     email = data.get('email')
     message = data.get('message')
     to_myself_msg = Message('New Contact Form Submission',
