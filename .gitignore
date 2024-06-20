@@ -1,1 +1,5 @@
 .env
+.DS_Store
+core/__pycache__/globalvar.cpython-311.pyc
+core/__pycache__/send_email.cpython-311.pyc
+core/__pycache__/utils.cpython-311.pyc

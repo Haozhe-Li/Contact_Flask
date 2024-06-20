@@ -5,7 +5,7 @@ from core.globalvar import *
 from core.utils import *
 
 
-def send_email(data, mail):
+def send_message(data, mail):
     name = data.get("name")
     if name == "test":
         return jsonify({"message": "Endpoint is working! Test success."}), 200
