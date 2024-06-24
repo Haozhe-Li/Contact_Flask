@@ -6,49 +6,25 @@ This is a simple email server built with Flask and Flask-Mail. It works fast and
 
 ## Demo
 
-Check online demo on my website [haozheli.com](https://www.haozheli.com/#contact)
+Check online demo on my website [haozhe.li](https://www.haozhe.li#contact)
 
-## Usage
+## Quick Start (No coding requires)
 
-To use this email server, follow these steps:
+1. Click here to [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHaozhe-Li%2FContact_Flask&env=MAIL_SERVER,MAIL_PASSWORD,MAIL_USERNAME,MAIL_SENDER,MAIL_FORWARD,MAIL_NAME,VALID_REQUEST_SOURCE&envDescription=Env%20needed%20for%20Contact%20Flask) to vercel (it is free and only requires a acount if you haven't had one)
 
-1. Clone the repository:
+2. Configure the environment variables as [mentioned](#Usage), also configure your domain (it would be ok if you use the ``vercel.app`` ). Here is a quick example for the environment variables:
 
-    ```bash
-    git clone https://github.com/Haozhe-Li/Contact_Flask.git
-    ```
+   ````text
+   MAIL_SERVER=smtp.mail.me.com (this one is for icloud)
+   MAIL_PASSWORD=abcdefg
+   MAIL_USERNAME=demo@haozheli.com
+   MAIL_SENDER=demo@haozheli.com
+   MAIL_FORWARD=your_email_address_to_be_forwarded@haozheli.com
+   MAIL_NAME=Haozhe Li
+   VALID_REQUEST_SOURCE=haozhe.li
+   ````
 
-2. Install the required dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Set up the environment variables by creating an ``.env`` file in your project directory:
-
-    - `MAIL_SERVER`: SMTP server address
-    - `MAIL_USERNAME`: SMTP server username.
-    - `MAIL_PASSWORD`: SMTP server password. **You may need to generate a secret key or an application-specific password.** Don't know how? [Check FAQ](#FAQ).
-    - `MAIL_SENDER`: Email address to send emails from
-    - `MAIL_FORWARD`: Email address to forward emails to
-    - `MAIL_NAME`: Name to display in the email
-    - `VALID_REQUEST_SOURCE`: The source of the request, e.g. your website example.com. This will helps you filter the malicious injection. Set to **FALSE** to disable flitering.
-
-4. Run the Flask application:
-
-    ```bash
-    python3 app.py
-    ```
-
-5. Access the contact form on your static website and start receiving emails!
-
-## Deployment
-
-1. Click here to [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHaozhe-Li%2FContact_Flask&env=MAIL_SERVER,MAIL_PASSWORD,MAIL_USERNAME,MAIL_SENDER,MAIL_FORWARD,MAIL_NAME,VALID_REQUEST_SOURCE&envDescription=Env%20needed%20for%20Contact%20Flask), or you can manually deployed to any platform as you like
-
-2. Configure the environment variables as [mentioned above](#Usage), also configure your domain (it would be ok if you use the ``vercel.app`` )
-
-3. Create a contact form in your static website, here is an example:
+3. Create a contact form in your static website. if you already have one, then copy and paste all the ``id=...`` and ``name=...`` to your own form. Here is an example:
 
    ````html
    <form id="emailForm">
@@ -104,7 +80,45 @@ To use this email server, follow these steps:
        </script>
    ````
 
-5. If you are still confused, check out the [``demo.html``](demo.html) file. Feel free to download it and use it on your own website. 
+5. If you are still confused, check out the [``demo.html``](/templates/demo.html) file. Feel free to download it and use it on your own website. 
+
+## Usage
+
+To use this email server, follow these steps:
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/Haozhe-Li/Contact_Flask.git
+    ```
+
+2. Install the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Set up the environment variables by creating an ``.env`` file in your project directory:
+
+    - `MAIL_SERVER`: SMTP server address
+    - `MAIL_USERNAME`: SMTP server username.
+    - `MAIL_PASSWORD`: SMTP server password. **You may need to generate a secret key or an application-specific password.** Don't know how? [Check FAQ](#FAQ).
+    - `MAIL_SENDER`: Email address to send emails from
+    - `MAIL_FORWARD`: Email address to forward emails to
+    - `MAIL_NAME`: Name to display in the email
+    - `VALID_REQUEST_SOURCE`: The source of the request, e.g. your website example.com. This will helps you filter the malicious injection. Set to **FALSE** to disable flitering.
+
+4. Run the Flask application:
+
+    ```bash
+    python3 app.py
+    ```
+
+5. Access the contact form on your static website and start receiving emails!
+
+## Deployment
+
+This project is built on flask (python) , so it works on almost all serverless platform. Click here to [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHaozhe-Li%2FContact_Flask&env=MAIL_SERVER,MAIL_PASSWORD,MAIL_USERNAME,MAIL_SENDER,MAIL_FORWARD,MAIL_NAME,VALID_REQUEST_SOURCE&envDescription=Env%20needed%20for%20Contact%20Flask) on vercel, or you can choose any platform that supports flask if you like.
 
 ## FAQ
 

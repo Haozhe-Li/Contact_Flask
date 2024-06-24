@@ -1,7 +1,7 @@
 # THIS IS A DEMO HTML FOR CONTACT FLASK PROJECT
 # AUTHOR: HAOZHE LI
 # DATE: JUNE 6 2024
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from flask_mail import Mail, Message
 from flask_cors import CORS
 from flask_limiter import Limiter
@@ -73,7 +73,7 @@ def send_email():
 
 @app.route('/')
 def index():
-    return 'Hi! This is a simple email server, and welcome to my project!'
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
